@@ -1,0 +1,33 @@
+{
+  "name": "@timelaps/io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "share": "npm version patch && git push && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timelaps/io.git"
+  },
+  "keywords": [],
+  "author": "Michael McLaughlin <michael.j.mclaughlin20@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timelaps/io/issues"
+  },
+  "homepage": "https://github.com/timelaps/io#readme",
+  "devDependencies": {
+    "@timelaps/batterie": "^1.0.71"
+  },
+  "dependencies": {
+    "@timelaps/constants": "^1.0.5",
+    "@timelaps/fn": "^1.0.4",
+    "@timelaps/hacks": "^1.0.2",
+    "@timelaps/is": "^1.0.8",
+    "@timelaps/json": "^1.0.3",
+    "@timelaps/n": "^1.0.21",
+    "@timelaps/to": "^1.0.5"
+  }
+}
