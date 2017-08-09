@@ -15,7 +15,8 @@ b.describe('parse', function () {
         t.expect(parse('{"a":1}')).toEqual({
             a: 1
         });
-    }, 2);
+        t.expect(parse('{"a:1}')).toBe('{"a:1}');
+    }, 3);
     b.it('will create a function if it can', function (t) {
         t.expect(parse('function (){}')).toBeFunction();
     });
