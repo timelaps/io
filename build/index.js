@@ -1,14 +1,14 @@
-var doTry = require('@timelaps/fn/do-try');
+var doTry = require('@timelaps/fn/do-try'),
+    CALL = 'call',
+    BOUND = 'Bound',
+    TRY = 'Try',
+    CALL_BOUND = CALL + BOUND,
+    CALL_TRY = CALL + TRY,
+    CALL_BOUND_TRY = CALL + BOUND + TRY;
 module.exports = buildCallers;
 
 function buildCallers(methodName, handler, second, memo_) {
     var memo = memo_ || {},
-        CALL = 'call',
-        BOUND = 'Bound',
-        TRY = 'Try',
-        CALL_BOUND = CALL + BOUND,
-        CALL_TRY = CALL + TRY,
-        CALL_BOUND_TRY = CALL + BOUND + TRY,
         call = memo[CALL] = memo[CALL] || {},
         callTry = memo[CALL_TRY] = memo[CALL_TRY] || {},
         callBound = memo[CALL_BOUND] = memo[CALL_BOUND] || {},
