@@ -28,6 +28,7 @@
     "@timelaps/is": "^1.0.8",
     "@timelaps/json": "^1.0.3",
     "@timelaps/n": "^1.0.21",
+    "@timelaps/time": "^1.0.1",
     "@timelaps/to": "^1.0.5"
   }
 }
