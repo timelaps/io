@@ -31,7 +31,11 @@ function parse(val_) {
         if ((val = wraptry(function () {
                 return JSONParse(val);
             }, function () {
-                return val;
+                return wraptry(function () {
+                    return evaluate('return ' + val);
+                }, function () {
+                    return val;
+                });
             })) !== valTrimmed) {
             return val;
         }

@@ -17,6 +17,16 @@ b.describe('parse', function () {
         });
         t.expect(parse('{"a:1}')).toBe('{"a:1}');
     }, 3);
+    b.it('will parse to a js object if it can', function (t) {
+        sets();
+        t.expect(parse('[foo]')).toEqual(['bar']);
+
+        function sets() {
+            // called without context outside of strict mode
+            // so it can easily be set to global
+            this.foo = 'bar';
+        }
+    });
     b.it('will create a function if it can', function (t) {
         t.expect(parse('function (){}')).toBeFunction();
     });
